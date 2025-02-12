@@ -1,8 +1,8 @@
 
-# Software Developer
-# Cloud Engineer - Big Data Development
+# Software Developer(Apple)
+# Data & Cloud Engineer - Big Data Development
 
-#### Technical Skills: Python, SQL, AWS,Apache Spark, Scala 
+#### Technical Skills: Pyspark,Python, SQL, AWS,Apache Spark, Scala 
 #### Cloud Technologies : AWS EC2,S3,Route 53 ,Azure Databricks,Azure Studio
 
 ## Education						       		
@@ -10,6 +10,14 @@
 - B.S., Computer Science | Sri Sairam Engineering College (_May 2019_)
 
 ## Work Experience
+**Tata Consultancy Services, (Apple Inc), Austin,Texas - Data Engineer Oct 2024-Present
+ -Design,implement,optimize and maintain pipelines (ETL) using Python, Java, SQL and Spark.
+ -Used large scale data processing techniques such as Spark, Flink and Kafka and store in AWS cluster.
+ -Added metrics to analyze the AB testing factor and create dashboards accordingly for services.
+ -Maintain pipelines and improve performance using ORCA framework and build data platform projects. The performance was
+  optimised by 80% for a 3Billion values dataset.
+ Tech Stack: Pyspark, Java, SQL , Gradle, Junit, Scala, AWS cloud, Kinesis, Lambda, AWS Glue
+
 **Software Developer @ Nielsen Media(TCS),Florida ,USA (June 2023 –Present)**
 - Experience in Designing and Developing ETL pipelines using Apache Spark .
 - Well versed in Spark SQL and data frame and functional Scala (32 node cluster) ,handle parquet files in S3.
