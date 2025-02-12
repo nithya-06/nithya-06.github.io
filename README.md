@@ -10,7 +10,7 @@
 - B.S., Computer Science | Sri Sairam Engineering College (_May 2019_)
 
 ## Work Experience
-**Tata Consultancy Services, (Apple Inc), Austin,Texas - Data Engineer Oct 2024-Present
+**Tata Consultancy Services, (Apple Inc), Austin,Texas - Data Engineer Oct 2024-Present**
  -Design,implement,optimize and maintain pipelines (ETL) using Python, Java, SQL and Spark.
  -Used large scale data processing techniques such as Spark, Flink and Kafka and store in AWS cluster.
  -Added metrics to analyze the AB testing factor and create dashboards accordingly for services.
