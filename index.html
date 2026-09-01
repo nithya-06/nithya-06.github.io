@@ -1,3 +1,6 @@
+
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -153,6 +156,11 @@ dialog::backdrop{background:rgba(0,0,0,.6)}
 .socials a:hover{background:var(--accent);border-color:var(--accent);color:#fff}
 .note{background:var(--dark-2);border-left:3px solid var(--accent);padding:26px;border-radius:4px}
 .note h4{color:#fff;font-size:18px;margin-bottom:10px}
+.fld{display:block;margin-bottom:14px}
+.fld span{display:block;font-family:Poppins;font-size:12px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:#fff;margin-bottom:6px}
+.fld input,.fld textarea{width:100%;background:#1c1c1c;border:1px solid #3a3a3a;border-radius:3px;padding:11px 13px;color:#eee;font-family:"Open Sans",sans-serif;font-size:14.5px;line-height:1.5}
+.fld input:focus,.fld textarea:focus{border-color:var(--accent);outline:none}
+.fld textarea{resize:vertical}
 footer{background:#151515;color:#7b7b7b;text-align:center;padding:22px;font-size:13px}
 </style>
 </head>
@@ -169,8 +177,8 @@ footer{background:#151515;color:#7b7b7b;text-align:center;padding:22px;font-size
     <li><a href="#contact"><i class="fa-solid fa-envelope"></i><span>Contact</span></a></li>
   </ul>
   <div class="social">
-    <a href="https://linkedin.com/in/nithyabalasundar" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-    <a href="https://github.com/nithya-06" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/nithya-balasundar/" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a>
+    <a href="https://github.com/nithya-06" aria-label="GitHub" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
   </div>
 </aside>
 
@@ -374,7 +382,7 @@ footer{background:#151515;color:#7b7b7b;text-align:center;padding:22px;font-size
         <span class="more">View details</span>
       </button>
 
-      <a class="proj" href="https://github.com/nithya-06" style="display:block">
+      <a class="proj" href="https://github.com/nithya-06" style="display:block" target="_blank" rel="noopener">
         <div class="ico"><i class="fa-brands fa-github"></i></div>
         <h4>More on GitHub</h4>
         <p>Side projects and experiments, including multi-cloud deployments and test-automation work.</p>
@@ -445,15 +453,25 @@ footer{background:#151515;color:#7b7b7b;text-align:center;padding:22px;font-size
           <li><i class="fa-solid fa-briefcase"></i><div><b>Availability</b>Open to new roles</div></li>
         </ul>
         <div class="socials">
-          <a href="https://linkedin.com/in/nithyabalasundar" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="https://github.com/nithya-06" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/nithya-balasundar/" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://github.com/nithya-06" aria-label="GitHub" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
           <a href="mailto:bnithya97@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
         </div>
       </div>
       <div class="note">
         <h4>Say hello</h4>
-        <p>If you have a role, a project, or just want to talk about distributed systems or agent architectures, email is the fastest way to reach me.</p>
-        <p style="margin-bottom:0"><a class="btn" href="mailto:bnithya97@gmail.com">Send me an email</a></p>
+        <p>If you have a role, a project, or just want to talk about distributed systems or agent architectures, send me a message here and it lands straight in my inbox.</p>
+        <form action="https://formsubmit.co/bnithya97@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="New message from your portfolio site">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="text" name="_honey" style="display:none">
+          <label class="fld"><span>Your name</span><input type="text" name="name" required autocomplete="name"></label>
+          <label class="fld"><span>Your email</span><input type="email" name="email" required autocomplete="email"></label>
+          <label class="fld"><span>Message</span><textarea name="message" rows="4" required></textarea></label>
+          <button class="btn" type="submit">Send message</button>
+        </form>
+        <p style="font-size:13px;margin:16px 0 0">Prefer email? <a href="mailto:bnithya97@gmail.com" style="color:var(--accent)">bnithya97@gmail.com</a></p>
       </div>
     </div>
   </div>
@@ -513,3 +531,4 @@ document.querySelectorAll('[data-close]').forEach(function(b){
 </script>
 </body>
 </html>
+```
