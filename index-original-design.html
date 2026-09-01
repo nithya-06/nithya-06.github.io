@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nithya Balasundar — Senior Backend Engineer</title>
+<meta name="description" content="Nithya Balasundar — senior backend engineer building cloud-native distributed systems and production AI/LLM platforms.">
+<meta property="og:title" content="Nithya Balasundar — Backend &amp; Data Engineer">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nithya-06.github.io/">
+<meta property="og:image" content="https://nithya-06.github.io/portrait.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#131A22;
+  --ink-soft:#44515C;
+  --paper:#E8EBE9;
+  --surface:#FFFFFF;
+  --rule:#C3CAC6;
+  --pine:#2E6F5E;
+  --ochre:#B08312;
+  --measure:66ch;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:"IBM Plex Sans",system-ui,sans-serif;font-size:17px;line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{font-family:Archivo,system-ui,sans-serif;font-weight:600;letter-spacing:-.02em;line-height:1.1;margin:0}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--pine);outline-offset:3px;border-radius:2px}
+img{max-width:100%;display:block}
+
+/* ---------- shell ---------- */
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.rail{display:none}
+@media (min-width:1040px){
+  .rail{
+    display:block;position:fixed;top:0;left:0;height:100vh;width:210px;
+    padding:40px 0 40px 32px;border-right:1px solid var(--rule);
+  }
+  .rail .mark{font-family:Archivo;font-weight:700;font-size:19px;line-height:1.2;margin-bottom:36px}
+  .rail .mark span{display:block;color:var(--ink-soft);font-weight:500}
+  .rail nav a{display:block;text-decoration:none;color:var(--ink-soft);padding:7px 0;font-size:15px}
+  .rail nav a:hover,.rail nav a.on{color:var(--ink)}
+  .rail nav a.on{font-weight:600}
+  .rail .foot{position:absolute;bottom:40px;font-size:13px;color:var(--ink-soft);font-family:"IBM Plex Mono",monospace}
+  main{margin-left:210px}
+}
+.topbar{
+  position:sticky;top:0;z-index:20;background:rgba(232,235,233,.94);
+  backdrop-filter:blur(6px);border-bottom:1px solid var(--rule);
+}
+.topbar .wrap{display:flex;gap:18px;overflow-x:auto;padding-top:12px;padding-bottom:12px;font-size:14px}
+.topbar a{text-decoration:none;color:var(--ink-soft);white-space:nowrap}
+@media (min-width:1040px){.topbar{display:none}}
+
+section{padding:88px 0;border-top:1px solid var(--rule)}
+section:first-of-type{border-top:0}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--pine);margin:0 0 14px}
+.lede{max-width:var(--measure)}
+p{margin:0 0 18px}
+
+/* ---------- hero ---------- */
+.hero{background:var(--ink);color:var(--paper);border-top:0;padding:96px 0 84px}
+.hero .grid{display:grid;gap:40px}
+@media (min-width:760px){.hero .grid{grid-template-columns:1fr 210px;align-items:start;gap:56px}}
+.hero h1{font-size:clamp(38px,7vw,68px);font-weight:700;letter-spacing:-.035em;margin-bottom:20px}
+.hero p{color:#C4CDC9;max-width:56ch;font-size:18px}
+.portrait{border-radius:50%;width:210px;height:210px;object-fit:cover}
+.facts{display:grid;gap:0;margin-top:44px;border-top:1px solid #2C3A44}
+@media (min-width:700px){.facts{grid-template-columns:repeat(3,1fr)}}
+.fact{padding:18px 0;border-bottom:1px solid #2C3A44}
+@media (min-width:700px){.fact{border-bottom:0;padding-right:28px}}
+.fact b{display:block;font-family:Archivo;font-size:23px;font-weight:600;letter-spacing:-.02em}
+.fact span{font-size:14px;color:#9BA8A2}
+
+/* ---------- about ---------- */
+.two{display:grid;gap:48px}
+@media (min-width:860px){.two{grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:72px}}
+.detail{margin:0;font-size:15.5px}
+.detail div{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px solid var(--rule)}
+.detail dt{color:var(--ink-soft)}
+.detail dd{margin:0;text-align:right;font-weight:500}
+.btn{
+  display:inline-block;margin-top:26px;padding:13px 22px;background:var(--pine);color:#fff;
+  text-decoration:none;font-weight:500;font-size:15.5px;border-radius:2px;
+}
+.btn:hover{background:#255A4C}
+
+/* ---------- pipeline (experience) ---------- */
+.pipe{position:relative;margin-top:8px;padding-left:30px}
+.pipe::before{content:"";position:absolute;left:5px;top:10px;bottom:10px;width:2px;background:var(--rule)}
+.stage{position:relative;padding:0 0 42px}
+.stage:last-child{padding-bottom:0}
+.stage::before{
+  content:"";position:absolute;left:-30px;top:8px;width:12px;height:12px;border-radius:50%;
+  background:var(--paper);border:2px solid var(--pine);
+}
+.when{font-family:"IBM Plex Mono",monospace;font-size:13px;color:var(--ink-soft);display:block;margin-bottom:5px}
+.stage h3{font-size:20px;margin-bottom:2px}
+.org{color:var(--pine);font-weight:500;font-size:15.5px;margin-bottom:10px}
+.stage ul{margin:0;padding-left:19px;max-width:var(--measure)}
+.stage li{margin-bottom:7px}
+.stack{font-size:14px;color:var(--ink-soft);margin-top:10px;max-width:var(--measure)}
+
+/* ---------- skills ---------- */
+.cols{display:grid;gap:34px}
+@media (min-width:700px){.cols{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1000px){.cols{grid-template-columns:repeat(3,1fr)}}
+.cols h3{font-size:16px;padding-bottom:9px;border-bottom:2px solid var(--ink);margin-bottom:12px}
+.cols ul{list-style:none;margin:0;padding:0;font-size:15.5px}
+.cols li{padding:5px 0;color:var(--ink-soft)}
+
+/* ---------- projects ---------- */
+.cards{display:grid;gap:22px}
+@media (min-width:760px){.cards{grid-template-columns:repeat(2,1fr)}}
+.card{background:var(--surface);padding:26px 26px 24px;border:1px solid var(--rule)}
+.card h3{font-size:19px;margin-bottom:10px}
+.card p{font-size:15.5px;color:var(--ink-soft);margin-bottom:14px}
+.tags{display:flex;flex-wrap:wrap;gap:7px}
+.tag{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--pine);border:1px solid var(--rule);padding:3px 8px;border-radius:2px}
+
+/* ---------- certs ---------- */
+.certs{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px}
+.cert{background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--ochre);padding:14px 18px;font-size:15.5px;font-weight:500}
+
+/* ---------- contact ---------- */
+.contact{background:var(--ink);color:var(--paper)}
+.contact h2{color:var(--paper)}
+.contact p{color:#C4CDC9;max-width:52ch}
+.links{display:flex;flex-wrap:wrap;gap:14px;margin-top:26px}
+.links a{
+  text-decoration:none;border:1px solid #3A4852;padding:12px 20px;font-size:15.5px;border-radius:2px;
+}
+.links a:hover{border-color:var(--paper)}
+footer{padding:26px 0;font-size:13.5px;color:var(--ink-soft);font-family:"IBM Plex Mono",monospace}
+</style>
+</head>
+<body>
+
+<aside class="rail" aria-label="Section navigation">
+  <div class="mark">Nithya<span>Balasundar</span></div>
+  <nav>
+    <a href="#top" class="on">Home</a>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="foot">Sacramento, California</div>
+</aside>
+
+<div class="topbar">
+  <div class="wrap">
+    <a href="#about">About</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+  </div>
+</div>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <h1>Nithya Balasundar</h1>
+        <p>Senior backend engineer building cloud-native distributed systems in Java and Spring Boot — and, more recently, the LLM services that sit on top of them. Currently at Apple, where I work on high-throughput backend platforms and multi-agent AI tooling.</p>
+      </div>
+      <img class="portrait" src="portrait.png" alt="Nithya Balasundar" width="210" height="210">
+    </div>
+    <div class="facts">
+      <div class="fact"><b>6+ years</b><span>Cloud-native backend engineering</span></div>
+      <div class="fact"><b>2M+ events/day</b><span>Handled with sub-second latency</span></div>
+      <div class="fact"><b>1B+ records/month</b><span>Through pipelines I've owned</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap two">
+    <div class="lede">
+      <p class="eyebrow">About</p>
+      <h2 style="font-size:30px;margin-bottom:20px">Services that stay fast under load</h2>
+      <p>I spent my first three years writing Spring Boot microservices for media analytics at Nielsen — multithreaded ingestion, billions of records a month, and the unglamorous work of tracking down concurrency bugs in production. That's where I learned how distributed systems actually break.</p>
+      <p>At Apple I still write backend services, but a growing share of my work is AI infrastructure: a multi-agent service built on FastAPI and LangGraph that turns natural-language questions into charts and generated Python widgets, RAG pipelines with embeddings and vector search, and the streaming, caching and observability layers that make all of it survive a load balancer.</p>
+      <p>The instinct is the same in both halves of the job — find the slow part, measure it, and leave behind something the next engineer can read.</p>
+    </div>
+    <div>
+      <dl class="detail">
+        <div><dt>Role</dt><dd>Senior Backend Engineer</dd></div>
+        <div><dt>Based in</dt><dd>Sacramento, California</dd></div>
+        <div><dt>Relocation</dt><dd>Open</dd></div>
+        <div><dt>Languages</dt><dd>English, Tamil</dd></div>
+        <div><dt>Education</dt><dd>M.S. CS, UT Arlington</dd></div>
+        <div><dt>Freelance</dt><dd>Not available</dd></div>
+      </dl>
+      <a class="btn" href="Nithya_Balasundar_Resume.pdf" download>Download my resume (PDF)</a>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <p class="eyebrow">Experience</p>
+    <h2 style="font-size:30px;margin-bottom:36px">Where I've worked</h2>
+    <div class="pipe">
+
+      <article class="stage">
+        <span class="when">Oct 2024 &mdash; Present</span>
+        <h3>Software Engineer (Big Data), Backend &amp; AI Platforms</h3>
+        <div class="org">Tata Consultancy Services &mdash; client: Apple Inc., Elk Grove, CA</div>
+        <ul>
+          <li>Built Java Spring Boot microservices processing 2M+ events/day for manufacturing operations, with REST APIs for production tracking and inventory that hold sub-second response times under concurrent load.</li>
+          <li>Designed high-throughput transactional services on Cassandra and PostgreSQL with an event-driven architecture, containerised on AWS EKS and shipped through automated CI/CD.</li>
+          <li>Built a multi-agent backend service (FastAPI + LangGraph) for Apple's IPA Studio that turns natural-language analytics questions into charts, tables and generated Python widget code.</li>
+          <li>Architected the two-tier agent system behind it &mdash; a classification and planning agent plus a parallelised code-generation pipeline that plans, fans out, validates and self-corrects the generated code using Claude.</li>
+          <li>Implemented RAG pipelines with embeddings and vector search for enterprise knowledge retrieval, integrating Claude and Gemini through an internal LLM gateway with mTLS and per-user cost tracking.</li>
+          <li>Added real-time SSE streaming with a dual-layer Redis and in-memory session cache for stateful multi-pod deployments, traced end to end with Langfuse.</li>
+          <li>Cut incident detection time by 40% through centralised logging and monitoring in Kibana.</li>
+        </ul>
+        <p class="stack">Java &middot; Spring Boot &middot; FastAPI &middot; LangGraph &middot; Cassandra &middot; PostgreSQL &middot; Redis &middot; AWS EKS &middot; Spark &middot; Kibana</p>
+      </article>
+
+      <article class="stage">
+        <span class="when">Sep 2021 &mdash; Sep 2024</span>
+        <h3>Software Engineer &mdash; Java / API Developer</h3>
+        <div class="org">Tata Consultancy Services &mdash; client: Nielsen LLC, Florida</div>
+        <ul>
+          <li>Developed Spring Boot microservices for media analytics platforms processing 1B+ records/month, with multithreaded ingestion pipelines taking millions of events a day from streaming and batch sources.</li>
+          <li>Improved reporting and dashboard performance 4x through SQL optimisation, indexing and caching.</li>
+          <li>Integrated Apache Spark via Apache Livy for near real-time analytics with end-to-end latency under five minutes, and built backend services for AI-assisted natural-language querying.</li>
+          <li>Resolved production concurrency and data-consistency issues in distributed systems; orchestrated ETL with Airflow and CI/CD with Jenkins across AWS.</li>
+        </ul>
+        <p class="stack">Java &middot; Spring Boot &middot; Apache Spark &middot; Livy &middot; Airflow &middot; Jenkins &middot; AWS &middot; SQL</p>
+      </article>
+
+      <article class="stage">
+        <span class="when">2021</span>
+        <h3>M.S., Computer Science &amp; Engineering</h3>
+        <div class="org">University of Texas at Arlington &mdash; GPA 3.83 / 4.0</div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <p class="eyebrow">Skills</p>
+    <h2 style="font-size:30px;margin-bottom:36px">What I work with</h2>
+    <div class="cols">
+      <div>
+        <h3>Languages</h3>
+        <ul><li>Java</li><li>Python</li><li>Scala</li><li>SQL</li></ul>
+      </div>
+      <div>
+        <h3>Backend &amp; APIs</h3>
+        <ul><li>Spring Boot, Spring MVC</li><li>REST APIs &amp; microservices</li><li>JDBC, Hibernate</li><li>Multithreading &amp; concurrency</li><li>System design, design patterns</li></ul>
+      </div>
+      <div>
+        <h3>AI / LLM engineering</h3>
+        <ul><li>LangGraph &amp; AI agents</li><li>RAG pipelines</li><li>Embeddings &amp; vector search</li><li>Prompt engineering</li><li>Langfuse observability</li></ul>
+      </div>
+      <div>
+        <h3>Cloud &amp; DevOps</h3>
+        <ul><li>AWS (EKS, EMR, S3, Lambda, Kinesis, Glue)</li><li>Kubernetes &amp; Docker</li><li>Jenkins, Git, CI/CD</li><li>mTLS &amp; token-based auth</li></ul>
+      </div>
+      <div>
+        <h3>Data &amp; databases</h3>
+        <ul><li>Apache Spark, Iceberg, Airflow</li><li>Batch &amp; streaming processing</li><li>Event-driven architecture</li><li>Cassandra, PostgreSQL, MySQL</li><li>Redis</li></ul>
+      </div>
+      <div>
+        <h3>Testing &amp; practices</h3>
+        <ul><li>JUnit, Mockito</li><li>Unit &amp; integration testing</li><li>Performance optimisation</li><li>Kibana &amp; observability</li><li>Agile / Scrum</li></ul>
+      </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <p class="eyebrow">Projects</p>
+    <h2 style="font-size:30px;margin-bottom:36px">Things I've built outside of work</h2>
+    <div class="cards">
+
+      <article class="card">
+        <h3>Multi-cloud Flask deployment</h3>
+        <p>A Python Flask app over the USGS earthquake dataset, deployed across IBM Cloud, Azure and AWS. Redis caching on Azure cut query time by about 40%; load balancing and autoscaling on AWS were validated with JMeter.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">Flask</span><span class="tag">Redis</span><span class="tag">AWS</span><span class="tag">Azure</span></div>
+      </article>
+
+      <article class="card">
+        <h3>Azure data platform</h3>
+        <p>Pipelines in Azure Data Factory using activities and stored procedures, with Databricks for transformation and Cosmos DB for storage. Deployed on AKS with Docker images.</p>
+        <div class="tags"><span class="tag">Data Factory</span><span class="tag">Databricks</span><span class="tag">Kubernetes</span><span class="tag">Cosmos DB</span></div>
+      </article>
+
+      <article class="card">
+        <h3>Tested full-stack web app</h3>
+        <p>An MVC web application in Java and JSP, built alongside a full test suite — Selenium WebDriver, JUnit, JaCoCo coverage, PIT mutation testing and EasyMock — to keep change volatility low.</p>
+        <div class="tags"><span class="tag">Java</span><span class="tag">JSP</span><span class="tag">Selenium</span><span class="tag">JUnit</span><span class="tag">PIT</span></div>
+      </article>
+
+      <article class="card">
+        <h3>More on GitHub</h3>
+        <p>Source for these and other experiments, including the AI and retrieval work I've been building on top of my backend projects.</p>
+        <div class="tags"><a class="tag" href="https://github.com/nithya-06">github.com/nithya-06</a></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="certifications">
+  <div class="wrap">
+    <p class="eyebrow">Certifications</p>
+    <h2 style="font-size:30px;margin-bottom:26px">Cloud certifications</h2>
+    <div class="certs">
+      <div class="cert">AWS Certified Cloud Practitioner</div>
+      <div class="cert">Google Cloud Data Engineering</div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <p class="eyebrow" style="color:#8FBFAF">Contact</p>
+    <h2 style="font-size:30px;margin-bottom:18px">Get in touch</h2>
+    <p>I'm open to backend, distributed systems and AI platform roles — based in Sacramento, California, and open to relocating.</p>
+    <div class="links">
+      <a href="mailto:bnithya97@gmail.com">bnithya97@gmail.com</a>
+      <a href="https://linkedin.com/in/nithyabalasundar">LinkedIn</a>
+      <a href="https://github.com/nithya-06">GitHub</a>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">© 2026 Nithya Balasundar</div></footer>
+
+</main>
+
+<script>
+(function(){
+  var links = Array.prototype.slice.call(document.querySelectorAll('.rail nav a'));
+  var sections = links.map(function(a){ return document.querySelector(a.getAttribute('href')); });
+  if(!('IntersectionObserver' in window)) return;
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(!e.isIntersecting) return;
+      var i = sections.indexOf(e.target);
+      if(i < 0) return;
+      links.forEach(function(l){ l.classList.remove('on'); });
+      links[i].classList.add('on');
+    });
+  }, {rootMargin:'-45% 0px -50% 0px'});
+  sections.forEach(function(s){ if(s) obs.observe(s); });
+})();
+</script>
+</body>
+</html>
